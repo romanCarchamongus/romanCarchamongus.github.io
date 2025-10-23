@@ -12,7 +12,7 @@ p {
 }
 
 .small {
-    height: 120px;
+    width: 150px;
 }
 
 .sae>div {
@@ -22,14 +22,27 @@ p {
 .sae p {
     width: 160px;
     font-size-adjust: 0.4;
-    margin-left: 10px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .sae {
     margin-right: 20px;
     margin-left: 20px;
+    padding: 10px;
+    border : solid 2px;
+    border-radius: 10px;
+    width: 360px;
 }
 
 .sem {
     display: flex;
+}
+
+h4 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
 }
