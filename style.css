@@ -7,5 +7,29 @@ header {
 }
 
 p {
-    width: 960px;;
+    width: 960px;
+    font-size-adjust: 0.5;
+}
+
+.small {
+    height: 120px;
+}
+
+.sae>div {
+    display: flex;
+}
+
+.sae p {
+    width: 160px;
+    font-size-adjust: 0.4;
+    margin-left: 10px;
+}
+
+.sae {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.sem {
+    display: flex;
 }
