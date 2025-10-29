@@ -13,10 +13,15 @@ p {
 
 .small {
     width: 150px;
+    /*display: flex;
+    justify-content: center;*/
 }
 
 .sae>div {
     display: flex;
+    
+    /*flex-direction: column;
+    justify-content: center;*/
 }
 
 .sae p {
@@ -35,6 +40,12 @@ p {
     border : solid 2px;
     border-radius: 10px;
     width: 360px;
+    display: flex;
+    flex-wrap: wrap;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    
 }
 
 .sem {
@@ -45,4 +56,6 @@ h4 {
     margin-top: 5px;
     margin-bottom: 10px;
     text-align: center;
+    align-self: flex-start;
+    justify-self: flex-start;
 }
