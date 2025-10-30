@@ -58,6 +58,10 @@ p {
     margin-bottom: 30px;
 }
 
+#moi {
+   font-size: larger; 
+}
+
 /* ---------- SECTION TITLES ---------- */
 h2 {
     font-size: 1.8rem;
@@ -123,6 +127,10 @@ h3 {
     margin-left: 15px;
     color: #333;
 }
+
+.exp {
+    display: none;
+}
 /* ---------- MODALE ---------- */
 .overlay {
     display: none; /* cachée par défaut */
@@ -142,15 +150,28 @@ h3 {
     background: white;
     padding: 30px;
     border-radius: 15px;
-    max-width: 600px;
-    width: 90%;
+    max-width: 1000px;
+    /*width: 90%;*/
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     animation: pop 0.3s ease;
-    text-align: center;
+    text-align: justify;
+    display: flex;
+}
+.modal>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal>div>div {
+    display: flex;
+}
+#modal-div {
+    margin-left: 50px;
+    align-content: center;
 }
 
 .modal img {
-    width: 80%;
+    width: 400px;
     border-radius: 10px;
     margin: 20px 0;
 }
@@ -167,6 +188,13 @@ h3 {
 
 .close:hover {
     transform: scale(1.2);
+}
+
+.modal h5 {
+    color: #004aad;
+    font-weight: bold;
+    font-size: medium;
+    text-decoration: underline;
 }
 
 @keyframes pop {

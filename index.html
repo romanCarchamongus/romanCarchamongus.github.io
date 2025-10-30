@@ -16,32 +16,45 @@
         </div>
         <div>
             <a href="">
-            <img class="logo" src="gitlab.png">
+                <img class="logo" src="gitlab.png">
             </a>
         </div>
     </header>
 
     <main>
-        <h2>Etudiant en BUT informatique</h2>
+        <h2>A propos de moi</h2>
 
-        <p>
-            Etudier en BUT informatique m'a permis d'effectuer de nombreux projets
-            me permettant de mettre en pratique les connaissances enseignées. Vous retrouverez
-            l'ensemble de mes projets réalisés au cours de ma formation.
-            [...]
+        <p id="moi">
+            Je suis Roman Roiné, né en 2006 et actuellement étudiant en BUT informatique.
+            L'informatique est un domaine qui m'a intéressé dès lors que j'ai choisi la spécialité 
+            NSI (Numérique et Science de l'Informatique) au lycée. J'ai toujours apprécié résoudre
+            des problèmes logiques, par exemple en mathématiques, et été fasciné par les possibilités
+            créatives que permet l'informatique. C'est pour cela que j'ai rapidement été conquis par 
+            ce domaine, en particuler le secteur de l'algorithmie et du back-end.
+            <br>
+            En dehors de l'informatique, j'apprécie beaucoup les jeux impliquant de la stratégie,
+            en particulier les échecs où j'ai été membre d'un club pendant quelques mois au cours de 
+            l'année ____. J'apprécie également jouer aux jeux vidéos, car ces jeux permettent de 
+            développer la persévérance et de [...]
+            <br>
+            Le BUT informatique est une formation très axée sur la pratique, avec beaucoup
+            de Travaux Dirigés et de projets concret. Ces projets permettent 
+            de mettre en pratique les connaissances enseignées.
+            Voici l'ensemble de mes projets réalisés au cours de ma formation.
         </p>
 
         <h2>Mes projets</h2>
         <br>
         <label for="filtre">Filtre</label>
-        <select id="filtre">
+        <select id="filtre" onchange="filter()">
             <option value="Tous">Tous</option>
             <option value="Java">Java</option>
             <option value="Csharp">C#</option>
             <option value="BasNiveau">Bas niveau</option>
             <option value="Gestion">Gestion de projet</option>
+            <option value="Git">Git</option>
             <option value="DB">Base de données</option>
-            <option value="DB">Hors programmation</option>
+            <option value="HP">Hors programmation</option>
 
         </select>
         <br>
@@ -49,18 +62,60 @@
         <!-- SEMESTRE 3 -->
         <h3>Semestre 3 : 09/2025 - Aujourd'hui</h3>
         <section id="s3" class="sem">
-            <div class="sae">
+            <div class="sae" id="ProjetReprise">
                 <h4>Projet de reprise - Labyrinthe</h4>
                 <div>
                     <img src="labyrintheProjReprise.png" class="small">
                     <p>Implémentation d'entités et d'un personnage déplaçable en Java</p>
+                    <div class="exp">
+                        Ce projet a permis de se remettre dans le rythme et de resolliciter toutes
+                        nos connaissances en programmation orientée objet et sur l'API Java.<br>
+                        En partant de l'interface déjà prête et de quelques élements de code, nous
+                        devions afficher un labyrinthe enregistré sous forme de fichier texte,
+                        coder un personnage déplaçable par les touches du clavier ainsi que de faire
+                        apparaître des entités se déplaçant automatiquement et aléatoirement.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>langage : Java</li>
+                            <li>IDE : netBeans</li>
+                            <li>Git : Gitlab</li>
+                        </ul>
+                        <h5>Compétences sollicités ou aquises</h5>
+                        <ul>
+                            <li>Lire des fichiers en Java</li>
+                            <li>Créer des exceptions personnalisées en Java</li>
+                            <li>Respecter les normes de la programmation orientée objet</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="sae">
+            <div class="sae" id="xxxlogistique">
                 <h4>XXX Logistique - Gestion d'un projet</h4>
                 <div>
                     <img src="extraitProto.png" class="small">
                     <p>Créer un projet en pratiquant le design thinking</p>
+                    <div class="exp">
+                        Une entreprise nommée XXX Logistique nous a confié la mission de
+                        réaliser un logiciel permettant à un entrepôt
+                        d'organiser correctement les mouvements des colis et de les stocker dans une base de données.<br>
+                        Le but de ce projet est de nous faire appliquer le design thinking ainsi que
+                        les étapes importantes de la réalisation d'un projet avant le codage. Ce projet 
+                        s'arrête à la partie analyse, nous n'avons pas codé le logiciel.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>Norme BPMN</li>
+                            <li>Design thinking</li>
+                            <li>Diagrammes (classe, contexte statique, cas d'utilisation...)</li>
+                        </ul>
+                        <h5>Compétences sollicités ou aquises</h5>
+                        <ul>
+                            <li>Appliquer le design thinking</li>
+                            <li>Modéliser un projet sous forme de diagrammes</li>
+                            <li>Gérer une équipe afin d'optimiser la réalisation des tâches</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -70,35 +125,35 @@
         <!-- SEMESTRE 2 -->
         <h3>Semestre 2 : 01/2025 - 06/2025</h3>
         <section id="s2" class="sem">
-            <div class="sae">
+            <div class="sae" id="jpo">
                 <h4>Atelier JPO 2025</h4>
                 <div>
                     <img src="LabyJPO.png" class="small">
                     <p>Inventer et réaliser un atelier pour la journée portes ouvertes 2025</p>
                 </div>
             </div>
-            <div class="sae">
+            <div class="sae" id="EvoGrapher">
                 <h4>EvoGrapher - Création de graphiques</h4>
                 <div>
                     <img src="evoGrapher.png" class="small">
                     <p>Réaliser une application complète permettant de créer et d'afficher des graphiques</p>
                 </div>
             </div>
-            <div class="sae">
+            <div class="sae" id="Botlings">
                 <h4>Botlings - développement d'une IHM</h4>
                 <div>
                     <img src="botLingIMG.png" class="small">
                     <p>Perfectionner un jeu en utilisant un Windows Form sous Visual Studio</p>
                 </div>
             </div>
-            <div class="sae">
+            <div class="sae" id="Reseau">
                 <h4>Configuration d'un réseau</h4>
                 <div>
                     <img src="configRouteur.png" class="small">
                     <p>Configurer des machines virtuelles pour communiquer en réseau</p>
                 </div>
             </div>
-            <div class="sae">
+            <div class="sae" id="graphes">
                 <h4>Implémentation d'algorithme sur des graphes</h4>
                 <div>
                     <img src="saegraph.png" class="small">
@@ -112,42 +167,42 @@
         <!-- SEMESTRE 1 -->
         <h3>Semestre 1 : 09/2024 - 01/2025</h3>
         <section id="s1" class="sem">
-            <div class="sae">
+            <div class="sae" id="installation">
                 <h4>Installation d'une machine virtuelle</h4>
                 <div>
                     <img src="SAEsystemS1.png" class="small">
                     <p>Installer et configurer une machine virtuelle permettant d'écrire des programmes</p>
                 </div>
             </div>
-            <div class="sae">
+            <div class="sae" id="Lowatem">
                 <h4>Lowatem - Jeu de stratégie</h4>
                 <div>
                     <img src="plateauLowatem.png" class="small">
                     <p>Gérer les actions du joueur et implémenter une IA qui choisit la meilleure action</p>
                 </div>
             </div>
-            <div class="sae">
+            <div class="sae" id="Odomo">
                 <h4>Odomo - Station météorologique</h4>
                 <div>
                     <img src="odomo.png" class="small">
                     <p>Implémenter les actions d'une station météorologique miniature</p>
                 </div>
             </div>
-            <div class="sae">
+            <div class="sae" id="DB">
                 <h4>Création et remplissage d'une base de données</h4>
                 <div>
                     <img src="pp.png" class="small">
                     <p>Générer une base de données depuis un cahier des charges avec un MCD</p>
                 </div>
             </div>
-            <div class="sae">
+            <div class="sae" id="Web">
                 <h4>Etu-santé - Site web sur la santé étudiante</h4>
                 <div>
                     <img src="pp.png" class="small">
                     <p>Créer un site Web en HTML/CSS sur le thème de la santé</p>
                 </div>
             </div>
-            <div class="sae">
+            <div class="sae" id="Caudalie">
                 <h4>Economie/Gestion - Analyse d'une entreprise</h4>
                 <div>
                     <img src="caudalie.png" class="small">
@@ -160,22 +215,77 @@
     <div id="overlay" class="overlay">
         <div class="modal">
             <span class="close">&times;</span>
-            <h2 id="modal-title">Titre du projet</h2>
-            <img id="modal-img" src="" alt="">
-            <p id="modal-text">Description détaillée du projet...</p>
+            <div>
+                <h2 id="modal-title">Titre du projet</h2>
+                <div>
+                    <img id="modal-img" src="" alt="">
+                    <div id="modal-div"></div>
+                </div>
+            </div>
+
+
         </div>
     </div>
     <script>
+        function filter() {
+            const filtre = document.getElementById("filtre");
+            const valeur = filtre.value; // récupère la valeur choisie
+            let f = ["Java", "Git", "Tous"]
+            document.getElementById('ProjetReprise').style.display = f.includes(valeur) ? 'block' : 'None'
+
+            f = ["Gestion", "HP", "Tous"]
+            document.getElementById('xxxlogistique').style.display = f.includes(valeur) ? 'block' : 'None'
+
+            f = ["Java", "Gestion", "Tous"]
+            document.getElementById('jpo').style.display = f.includes(valeur) ? 'block' : 'None'
+
+            f = ["Java", "Gestion", "Git", "Csharp", "DB", "Tous"]
+            document.getElementById('EvoGrapher').style.display = f.includes(valeur) ? 'block' : 'None'
+
+            f = ["Csharp", "Tous"]
+            document.getElementById('Botlings').style.display = f.includes(valeur) ? 'block' : 'None'
+
+            f = ["BasNiveau", "Tous"]
+            document.getElementById('Reseau').style.display = f.includes(valeur) ? 'block' : 'None'
+
+            f = ["Java", "Git", "Tous"]
+            document.getElementById('graphes').style.display = f.includes(valeur) ? 'block' : 'None'
+
+            f = ["BasNiveau", "HP", "Tous"]
+            document.getElementById('installation').style.display = f.includes(valeur) ? 'block' : 'None'
+
+            f = ["Java", "Git", "Tous"]
+            document.getElementById('Lowatem').style.display = f.includes(valeur) ? 'block' : 'None'
+
+            f = ["Java", "Tous"]
+            document.getElementById('Odomo').style.display = f.includes(valeur) ? 'block' : 'None'
+
+            f = ["DB", "Tous"]
+            document.getElementById('DB').style.display = f.includes(valeur) ? 'block' : 'None'
+
+            f = ["Git", "Tous"]
+            document.getElementById('Web').style.display = f.includes(valeur) ? 'block' : 'None'
+
+            f = ["HP", "Tous"]
+            document.getElementById('Caudalie').style.display = f.includes(valeur) ? 'block' : 'None'
+        }
+
+        /*filtre.addEventListener("change", () => {
+            
+            
+        });*/
         document.querySelectorAll('.sae').forEach(sae => {
             sae.addEventListener('click', () => {
                 const title = sae.querySelector('h4').innerText;
                 const imgSrc = sae.querySelector('img').src;
                 const text = sae.querySelector('p').innerText;
+                const exp = sae.querySelector('.exp');
 
                 // Remplit la modale
                 document.getElementById('modal-title').innerText = title;
                 document.getElementById('modal-img').src = imgSrc;
-                document.getElementById('modal-text').innerText = text;
+                /*document.getElementById('modal-text').innerText = text;*/
+                document.getElementById('modal-div').innerHTML = exp ? exp.innerHTML : "";
                 /*
                 à mettre
                 travail demandé
