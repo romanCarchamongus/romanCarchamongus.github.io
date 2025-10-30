@@ -10,18 +10,41 @@
 
 <body>
     <header>
-        <img id="photo" src="pp.png" />
-        <h1>Roman Roiné</h1>
+        <div>
+            <img id="photo" src="pp.png" />
+            <h1>Roman Roiné</h1>
+        </div>
+        <div>
+            <a href="">
+            <img class="logo" src="gitlab.png">
+            </a>
+        </div>
     </header>
 
     <main>
+        <h2>Etudiant en BUT informatique</h2>
+
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis provident,
-            accusamus incidunt, a officiis qui quasi nihil tenetur iusto sunt, aliquid enim impedit at
-            distinctio commodi! Sed, nostrum dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Etudier en BUT informatique m'a permis d'effectuer de nombreux projets
+            me permettant de mettre en pratique les connaissances enseignées. Vous retrouverez
+            l'ensemble de mes projets réalisés au cours de ma formation.
+            [...]
         </p>
 
         <h2>Mes projets</h2>
+        <br>
+        <label for="filtre">Filtre</label>
+        <select id="filtre">
+            <option value="Tous">Tous</option>
+            <option value="Java">Java</option>
+            <option value="Csharp">C#</option>
+            <option value="BasNiveau">Bas niveau</option>
+            <option value="Gestion">Gestion de projet</option>
+            <option value="DB">Base de données</option>
+            <option value="DB">Hors programmation</option>
+
+        </select>
+        <br>
 
         <!-- SEMESTRE 3 -->
         <h3>Semestre 3 : 09/2025 - Aujourd'hui</h3>
@@ -42,7 +65,7 @@
             </div>
         </section>
 
-        <hr>
+
 
         <!-- SEMESTRE 2 -->
         <h3>Semestre 2 : 01/2025 - 06/2025</h3>
@@ -84,7 +107,7 @@
             </div>
         </section>
 
-        <hr>
+
 
         <!-- SEMESTRE 1 -->
         <h3>Semestre 1 : 09/2024 - 01/2025</h3>
@@ -124,10 +147,16 @@
                     <p>Créer un site Web en HTML/CSS sur le thème de la santé</p>
                 </div>
             </div>
+            <div class="sae">
+                <h4>Economie/Gestion - Analyse d'une entreprise</h4>
+                <div>
+                    <img src="caudalie.png" class="small">
+                    <p>Réaliser l'analyse micro et macro de l'entreprise Caudalie</p>
+                </div>
+            </div>
         </section>
     </main>
 
-    <!-- Fenêtre superposée (modale) cachée par défaut -->
     <div id="overlay" class="overlay">
         <div class="modal">
             <span class="close">&times;</span>
@@ -147,6 +176,13 @@
                 document.getElementById('modal-title').innerText = title;
                 document.getElementById('modal-img').src = imgSrc;
                 document.getElementById('modal-text').innerText = text;
+                /*
+                à mettre
+                travail demandé
+                outils utilisés
+                compétences aquises
+                note obtenue (optionnel)
+                */
 
                 // Affiche la modale
                 document.getElementById('overlay').style.display = 'flex';
