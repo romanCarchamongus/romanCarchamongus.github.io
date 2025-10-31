@@ -1,61 +1,223 @@
-#photo {
-    width: 70px
+/* ---------- RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, sans-serif;
 }
 
+body {
+    background-color: #f5f7fa;
+    color: #222;
+    line-height: 1.5;
+}
+
+/* ---------- HEADER ---------- */
 header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #0066ff, #00c6ff);
+    color: white;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+}
+
+.logo {
+    width: 60px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 p {
-    width: 960px;
-    font-size-adjust: 0.5;
+    max-width: 900px;
+    margin-bottom: 30px;
 }
 
-.small {
-    width: 150px;
-    /*display: flex;
-    justify-content: center;*/
+#moi {
+   font-size: larger; 
 }
 
-.sae>div {
+/* ---------- SECTION TITLES ---------- */
+h2 {
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    color: #004aad;
+    border-bottom: 3px solid #004aad;
+    display: inline-block;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin: 30px 0 15px;
+    color: #333;
+}
+
+/* ---------- SAE PROJECTS ---------- */
+.sem {
+    position: relative;
     display: flex;
-    
-    /*flex-direction: column;
-    justify-content: center;*/
-}
-
-.sae p {
-    width: 160px;
-    font-size-adjust: 0.4;
-    margin-left: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
 }
 
 .sae {
-    margin-right: 20px;
-    margin-left: 20px;
-    padding: 10px;
-    border : solid 2px;
-    border-radius: 10px;
-    width: 360px;
-    display: flex;
-    flex-wrap: wrap;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-    
+    flex: 1 1 280px;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
 }
 
-.sem {
-    display: flex;
+.sae:hover {
+    transform: scale(1.05);
+    background-color: #f0f6ff;
+    border-color: #004aad;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-h4 {
-    margin-top: 5px;
+.sae > h4 {
     margin-bottom: 10px;
     text-align: center;
-    align-self: flex-start;
-    justify-self: flex-start;
+    font-size: 1rem;
+    color: #004aad;
+}
+
+.sae > div {
+    display: flex;
+    align-items: center;
+}
+
+.sae img.small {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.sae p {
+    font-size: 0.9rem;
+    margin-left: 15px;
+    color: #333;
+}
+
+.exp {
+    display: none;
+}
+/* ---------- MODALE ---------- */
+.overlay {
+    display: none; /* cachée par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 1200px;
+    /*width: 90%;*/
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: pop 0.3s ease;
+    text-align: justify;
+    display: flex;
+}
+.modal>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal>div>div {
+    display: flex;
+}
+#modal-div {
+    margin-left: 50px;
+    align-content: center;
+}
+
+.modal img {
+    width: 400px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.close:hover {
+    transform: scale(1.2);
+}
+
+.modal h5 {
+    color: #004aad;
+    font-weight: bold;
+    font-size: medium;
+    text-decoration: underline;
+}
+
+@keyframes pop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    .sae {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    #photo {
+        width: 60px;
+        height: 60px;
+    }
 }
