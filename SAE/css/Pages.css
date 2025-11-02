@@ -1,0 +1,267 @@
+/*couleur de fond*/
+body {
+    background-color: #fff9f4;
+}
+
+
+/*En-tête présente sur chaque page*/
+/*logo site*/
+div#lnTitre img {
+    height: 60px;
+    align-self: center;
+    margin-right: 10px;
+}
+/*logo réseaux sociaux*/
+div#réseaux img {
+    width: 50px;
+    height: 50px;
+}
+/*Conteneur principal de l'en-tête*/
+div#lnTitre {
+    background-color: #6CCeFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: solid;
+    border-bottom: solid;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+/*éléments à gauche de l'en-tête*/
+div#lnTitre div {
+    display: flex;
+}
+/*Titre principal*/
+#lnTitre h1 {
+    font-size: 2.1rem;
+    border-left: solid 3px;
+    margin: 0;
+    align-self: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+/*conteneur des logos des réseaux sociaux*/
+#lnTitre+div {
+    display: flex;
+    justify-content: space-between;
+}
+/*Menu de navigation*/
+nav {
+    display: flex;
+    flex: fit-content;
+}
+
+ul {
+    display: flex;
+    margin-top: 0;
+    align-items: flex-end;
+    flex: fit-content;
+    justify-content: space-around;
+    margin-left: 20vw;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    background-color: #6CCeFF;
+    list-style-type: none;
+    width: 150px;
+    text-align: center;
+}
+
+li:has(.déroulant) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+/*contenu menu déroulant*/
+.déroulant {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+
+}
+
+.déroulant li {
+    background-color: #b4e6ff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: dashed 1px;
+    border-top: none;
+
+}
+
+li>p {
+    margin: 0;
+}
+/*Activation du menu déroulant*/
+li:hover>.déroulant {
+    display: block;
+}
+
+li:hover {
+    background-color: #41c0ff;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+h2 {
+    background-color: #eeeeee;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+/*Chaque boîtes où se situe les conseils*/
+article {
+    margin-right: 8vw;
+    margin-left: 8vw;
+    margin-top: 50px;
+    border: solid 1px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #fff;
+    transition: 200ms ease-in-out;
+    display: flex;
+    justify-content: space-between;
+
+}
+/*Désigne les articles ou l'image est devant le texte*/
+.imgReverse {
+    flex-direction: row-reverse;
+}
+
+.imgReverse>div {
+    margin-left: 20px;
+}
+
+article+article {
+    margin-top: 75px;
+}
+/*effet agrandit lorsque l'on passe la souris sur l'article avec changement de couleur'*/
+article:hover {
+    background-color: #eeeeff;
+    transition: 200ms ease-in-out;
+    transform: scale(1.05);
+}
+
+article>div>p {
+    margin: 0;
+    margin-right: 20px;
+}
+/*Désigne l'ensemble titre h3 + paragraphe p dans un article*/
+article>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: fit-content;
+}
+
+article p {
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+article img {
+    object-fit: contain;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #0000aa;
+}
+
+footer {
+    margin: -10px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    background-color: #ddd;
+    border-top: solid 1px #555;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer p {
+    margin-right: 50px;
+}
+
+footer p:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width:1110px) {
+    h1 {
+        display: block;
+        text-align: center;
+    }
+
+    div#lnTitre {
+        flex-direction: column;
+    }
+
+    #lnTitre>div {
+        order: 0;
+        flex-direction: row;
+    }
+
+    div#lnTitre img {
+        right: 20px;
+    }
+
+    #lnTitre .formulaire {
+        order: 1;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: row;
+    }
+
+    article {
+        flex-direction: column;
+    }
+
+    .imgReverse {
+        flex-direction: column;
+    }
+
+    article img {
+        width: 60%;
+        align-self: center;
+    }
+
+    nav>ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+
+
+    #lnTitre h1 {
+        border-left: none;
+    }
+
+    nav>ul li {
+        margin-bottom: 10px;
+        border: solid 2px;
+    }
+
+    .déroulant li {
+        margin-bottom: 0px
+    }
+
+}
