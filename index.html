@@ -26,35 +26,55 @@
             <a href="https://www.linkedin.com/in/roman-roiné-247361397">
                 <img class="logo" src="linkedin-removebg-preview.png">
             </a>
-            
+
         </div>
     </header>
 
     <main>
-        <a href="#titreMoi"><h2 id="titreMoi">A propos de moi</h2></a>
-
-        <p id="moi">
-            Je suis Roman Roiné, né en 2006 et actuellement étudiant en BUT informatique.
-            L'informatique est un domaine qui m'a intéressé dès lors que j'ai choisi la spécialité 
-            NSI (Numérique et Science de l'Informatique) au lycée. J'ai toujours apprécié résoudre
-            des problèmes logiques, par exemple en mathématiques, et été fasciné par les possibilités
-            créatives que permet l'informatique. C'est pour cela que j'ai rapidement été conquis par 
-            ce domaine, en particulier ce qui concerne la création d'algorithmes et le secteur du back-end.
-            <br>
-            En dehors de l'informatique, j'apprécie beaucoup les jeux impliquant de la stratégie,
-            en particulier les échecs où j'ai été membre d'un club pendant quelques mois au cours de 
-            l'année 2023. J'apprécie également jouer aux jeux vidéos ainsi que la lecture.
-            Ces activités m'ont permis de développer ma capacité d'analyse, 
-            ma persévérance ainsi que ma capacité de concentration.
-            <br>
-            <br>
-            Le BUT informatique est une formation très axée sur la pratique, avec beaucoup
-            de travaux dirigés (TD) et de projets concrets. Ces projets permettent 
-            de mettre en pratique les connaissances enseignées.
-            Voici l'ensemble de mes projets réalisés au cours de ma formation.
-        </p>
-
-        <a href="#proj"><h2 id="proj">Mes projets universitaires</h2></a>
+        <a href="#titreMoi">
+            <h2 id="titreMoi">A propos de moi</h2>
+        </a>
+        <div id="blocProposMoi">
+            <div id="optionMoi">
+                <button name="presentation" onclick="showPresentation()">Présentation</button>
+                <button name="softSkills" onclick="showSkills()">Soft-skills</button>
+                <button name="centreInteret" onclick="showInteret()">Centres d'intérêt</button>
+            </div>
+            <div id="pres">
+                Je suis Roman Roiné, né en 2006 et actuellement étudiant en BUT informatique.
+                L'informatique est un domaine qui m'a intéressé dès lors que j'ai choisi la spécialité
+                NSI (Numérique et Science de l'Informatique) au lycée. J'ai toujours apprécié résoudre
+                des problèmes logiques, par exemple en mathématiques, et été fasciné par les possibilités
+                créatives que permet l'informatique. C'est pour cela que j'ai rapidement été conquis par
+                ce domaine, en particulier ce qui concerne la création d'algorithmes et le secteur du back-end.
+                
+            </div>
+            <div id="softSkills">
+                bientôt
+                <!-- <ul>
+                    <li>Patience</li>
+                </ul> -->
+            </div>
+            <div id="interet">
+                <ul>
+                    <li>Jeux impliquant de la stratégie, échecs en particulier</li>
+                    <ul>
+                        <li>Ancien joueur du club Echequier Tressois</li>
+                        <li>+1200 elo en rapid chess.com</li>
+                    </ul>
+                    <li>Lecture de roman policier ou de light novel</li>
+                    <li>Jeux vidéo</li>
+                    <ul>
+                        <li>Jeux de plateforme : Geometry Dash, Celeste</li>
+                        <li>Jeux nintendo : Mario Kart, Splatoon, Pokemon</li>
+                    </ul>
+                </ul>
+            </div>
+            
+        </div>
+        <a href="#proj">
+            <h2 id="proj">Mes projets universitaires</h2>
+        </a>
         <br>
         <label for="filtre">Filtre</label>
         <select id="filtre" onchange="filter()">
@@ -112,9 +132,10 @@
                     <div class="exp">
                         Une entreprise nommée XXX Logistique nous a confié la mission de
                         réaliser un logiciel permettant à un entrepôt
-                        d'organiser correctement les mouvements des colis et de les stocker dans une base de données.<br>
+                        d'organiser correctement les mouvements des colis et de les stocker dans une base de
+                        données.<br>
                         Le but de ce projet, par équipe de 5, est de nous faire appliquer le design thinking ainsi que
-                        les étapes importantes de la réalisation d'un projet avant le codage. Ce projet 
+                        les étapes importantes de la réalisation d'un projet avant le codage. Ce projet
                         s'arrête à la partie analyse, nous n'avons pas codé le logiciel.
 
                         <h5> Outils utilisés</h5>
@@ -145,11 +166,11 @@
                     <img src="LabyJPO.png" class="small">
                     <p>Inventer et réaliser un atelier pour la journée portes ouvertes 2025</p>
                     <div class="exp">
-                        Lors des journées portes ouvertes, il y a plusieurs ateliers à 
+                        Lors des journées portes ouvertes, il y a plusieurs ateliers à
                         disposition des lycéens afin d'apprendre les premières bases d'un langage.
                         Mon équipe, composée de 4 personnes, avait pour mission de produire un atelier
-                        sur le langage Java<br> 
-                        A partir d'une interface graphique fournie, nous devions produire un jeu 
+                        sur le langage Java<br>
+                        A partir d'une interface graphique fournie, nous devions produire un jeu
                         éducatif ainsi qu'un livret guidant le joueur afin d'enseigner
                         les bases de Java et de la programmation en général.
 
@@ -179,7 +200,7 @@
                         A partir d'un cahier des charges et par équipe de 5, nous devions fournir
                         une application fonctionnelle permettant la création de divers graphiques tel
                         que des histogrammes, des régressions linéaires... Ces graphiques devaient permettre
-                        de visualiser des données de plusieurs pays préalablement stockés dans une base de 
+                        de visualiser des données de plusieurs pays préalablement stockés dans une base de
                         données. Nous devions également rendre un dossier de conception, un dossier de spécification
                         et présenter un pitch en anglais ainsi qu'une démo.
 
@@ -206,12 +227,12 @@
                     <img src="botLingIMG.png" class="small">
                     <p>Perfectionner un jeu en utilisant un Windows Form sous Visual Studio</p>
                     <div class="exp">
-                        Nous avons été fourni d'un jeu incomplet dont il a fallu créer plusieurs 
+                        Nous avons été fourni d'un jeu incomplet dont il a fallu créer plusieurs
                         fonctionnalités supplémentaires. Ce jeu est une variante d'un tower defense,
                         un jeu où il faut éliminer des ennemis arrivant à la chaîne.<br>
-                        Par équipe de 3, nous avons dû nous organiser afin d'implémenter le plus 
-                        de fonctionnalités possibles parmi une liste donnée. Parmi cette liste, 
-                        la plus difficile que j'ai eu à m'occuper était une implémentation d'un 
+                        Par équipe de 3, nous avons dû nous organiser afin d'implémenter le plus
+                        de fonctionnalités possibles parmi une liste donnée. Parmi cette liste,
+                        la plus difficile que j'ai eu à m'occuper était une implémentation d'un
                         algorithme de Dijkstra.
 
                         <h5> Outils utilisés</h5>
@@ -234,10 +255,10 @@
                     <img src="configRouteur.png" class="small">
                     <p>Configurer des machines virtuelles pour communiquer en réseau</p>
                     <div class="exp">
-                        Lors de ce projet par équipe de 2 nous avons dû réaliser plusieurs 
+                        Lors de ce projet par équipe de 2 nous avons dû réaliser plusieurs
                         liaisons entre des machines virtuelles afin de les faire communiquer en réseau.<br>
                         L'objectif final était de fournir un tutoriel sur toutes les étapes nécessaires
-                        afin de brancher les machines en réseau afin qu'elles puissent communiquer et 
+                        afin de brancher les machines en réseau afin qu'elles puissent communiquer et
                         de s'en servir comme environnement de travail.
 
                         <h5> Outils utilisés</h5>
@@ -258,12 +279,12 @@
                     <img src="saegraph.png" class="small">
                     <p>Implémenter des algorithmes de Force Directed et d'Autosizing sur plusieurs types de graphes</p>
                     <div class="exp">
-                        L'objectif de ce projet était d'appliquer différents algorithmes sur des graphes, 
-                        en particulier les algorithmes de Force Directed et d'Autosizing, et ceci par 
+                        L'objectif de ce projet était d'appliquer différents algorithmes sur des graphes,
+                        en particulier les algorithmes de Force Directed et d'Autosizing, et ceci par
                         équipe de deux.<br>
-                        Pour cela nous avions d'abord dû créer deux classes de graphes différentes, l'une 
+                        Pour cela nous avions d'abord dû créer deux classes de graphes différentes, l'une
                         étant basée sur les matrices d'adjacences, et l'autre sur les listes d'adjacences.
-                        Pour chacune des classes, nous devions implémenter les deux algorithmes ainsi 
+                        Pour chacune des classes, nous devions implémenter les deux algorithmes ainsi
                         qu'observer le résultat sur une interface donnée.
 
                         <h5> Outils utilisés</h5>
@@ -291,11 +312,13 @@
                 <h4>Installation d'une machine virtuelle</h4>
                 <div>
                     <img src="SAEsystemS1.png" class="small">
-                    <p>Installer et configurer une machine virtuelle permettant d'écrire des programmes en langage forth</p>
+                    <p>Installer et configurer une machine virtuelle permettant d'écrire des programmes en langage forth
+                    </p>
                     <div class="exp">
-                        Lors de ce projet, nous devions trouver une distribution linux légère afin de 
+                        Lors de ce projet, nous devions trouver une distribution linux légère afin de
                         l'installer sur une machine virtuelle sous VMware. Nous étions par équipe de deux
-                        et après l'installation de linux mint, la distribution que nous avions choisi,                        , il a fallu installer vscode, créer 
+                        et après l'installation de linux mint, la distribution que nous avions choisi, , il a fallu
+                        installer vscode, créer
                         les utilisateurs et être capable d'exécuter un programme simple en forth<br>
                         L'objectif était ensuite de présenter le bon fonctionnement de notre installation
                         lors d'une soutenance, ainsi que de présenter un petit rapport sur les raisons de notre
@@ -325,14 +348,14 @@
                         Ce projet était séparé en deux parties :<br>
                         La première partie était en travail individuel, le code d'un jeu original nommé "Lowatem"
                         était fourni avec une interface graphique. Les consignes étaient réparties en 14 niveaux
-                        de difficulté, chaque niveau décrivant des règles d'actions possibles. Notre objectif 
+                        de difficulté, chaque niveau décrivant des règles d'actions possibles. Notre objectif
                         était d'être en mesure de renvoyer l'ensemble des actions possibles sur un plateau
                         donné. J'ai personnellement atteint le niveau 11, me plaçant dans les 15% de ma promotion
                         ayant validé ce niveau ou plus haut. <br>
-                        La deuxième partie était par équipe de deux. Il fallait concevoir deux IA qui joueraient 
-                        au jeu avec comme objectif d'être la plus performante possible. Les IA de toutes les 
+                        La deuxième partie était par équipe de deux. Il fallait concevoir deux IA qui joueraient
+                        au jeu avec comme objectif d'être la plus performante possible. Les IA de toutes les
                         équipes s'affrontaient chaque jour et étaient classés selon leur nombre de victoire.
-                        Nos IA se basaient sur un algorithme MinMax et étaient généralement situés dans les hauteurs 
+                        Nos IA se basaient sur un algorithme MinMax et étaient généralement situés dans les hauteurs
                         du classement.
 
                         <h5> Outils utilisés</h5>
@@ -356,8 +379,8 @@
                     <p>Implémenter les actions d'une station météorologique miniature</p>
                     <div class="exp">
                         Odomo est notre premier projet en Java. Le code d'une petite station météorologique
-                        nous était fourni incomplet et il a fallu ajouter les fonctionnalités manquantes. 
-                        La console faisait office d'interface graphique, la station en question n'était qu'une 
+                        nous était fourni incomplet et il a fallu ajouter les fonctionnalités manquantes.
+                        La console faisait office d'interface graphique, la station en question n'était qu'une
                         interface visuelle et non une vraie station météorologique. <br>
                         Ce projet nous a permis de nous exercer sur les tableaux, et d'appliquer les
                         compétences de base de la programmation en Java.
@@ -381,12 +404,12 @@
                     <img src="mcdSaeDB.png" class="small">
                     <p>Générer une base de données depuis un cahier des charges avec un MCD</p>
                     <div class="exp">
-                        Notre objectif était, depuis un document qui décrivait l'ensemble 
+                        Notre objectif était, depuis un document qui décrivait l'ensemble
                         des attentes d'un client, de créer un Modèle Conceptuel des Données (MCD)
-                        sur le logiciel winDesign afin de pouvoir ensuite générer le script de 
+                        sur le logiciel winDesign afin de pouvoir ensuite générer le script de
                         création de base.<br>
                         Nous étions par équipe de deux, et après avoir exécuté le script de création
-                        ainsi qu'avoir ajouté plusieurs contraintes d'intégrité, nous avions dû remplir 
+                        ainsi qu'avoir ajouté plusieurs contraintes d'intégrité, nous avions dû remplir
                         la base manuellement afin de vérifier son bon fonctionnement.
 
                         <h5> Outils utilisés</h5>
@@ -410,8 +433,8 @@
                     <p>Créer un site Web en HTML/CSS sur le thème de la santé</p>
                     <div class="exp">
                         L'objectif de ce projet était la création d'un site web sur le thème de la santé
-                        afin de rassembler toutes les connaissances qui nous avaient été enseignées en cours. 
-                        Nous avions beaucoup de liberté sur le contenu, j'ai ainsi choisi de faire 
+                        afin de rassembler toutes les connaissances qui nous avaient été enseignées en cours.
+                        Nous avions beaucoup de liberté sur le contenu, j'ai ainsi choisi de faire
                         un site sur le thème de la santé en tant qu'étudiant.<br>
                         Il s'agissait d'un travail individuel où seul l'HTML et le CSS étaient autorisés.
                         Notre site devait tout de même être responsive afin de pouvoir s'adapter sur un écran
@@ -437,13 +460,13 @@
                     <img src="caudalie.png" class="small">
                     <p>Réaliser le diagnostic de l'entreprise Caudalie</p>
                     <div class="exp">
-                        Ce projet s'éloigne de la programmation. En effet, par équipe de 5, 
+                        Ce projet s'éloigne de la programmation. En effet, par équipe de 5,
                         notre objectif était de faire des recherches auprès d'une entreprise afin
-                        d'y faire une analyse micro et macro environnementale. Pour cela nous avons 
+                        d'y faire une analyse micro et macro environnementale. Pour cela nous avons
                         utilisé le modèle PESTEL ainsi que le modèle de la concurrence élargie de Porter<br>
                         Notre équipe a choisi l'entreprise Caudalie parmi la liste proposée. Nous devions
                         d'abord effectuer une présentation orale sur le fonctionnement interne de l'entreprise
-                        puis écrire un rapport d'une dizaine de pages sur celle-ci, avec son fonctionnement ainsi 
+                        puis écrire un rapport d'une dizaine de pages sur celle-ci, avec son fonctionnement ainsi
                         que son diagnostic.
 
                         <h5> Outils utilisés</h5>
@@ -477,12 +500,27 @@
         </div>
     </div>
     <script>
+        function showPresentation(){
+            document.getElementById("pres").style.display = "block";
+            document.getElementById("interet").style.display = "none";
+            document.getElementById("softSkills").style.display = "none";
+        }
+        function showInteret(){
+            document.getElementById("pres").style.display = "none";
+            document.getElementById("interet").style.display = "block";
+            document.getElementById("softSkills").style.display = "none";
+        }
+        function showSkills(){
+            document.getElementById("pres").style.display = "none";
+            document.getElementById("interet").style.display = "none";
+            document.getElementById("softSkills").style.display = "block";
+        }
         function filter() {
             const filtre = document.getElementById("filtre");
             const valeur = filtre.value; // récupère la valeur choisie
-            
+
             document.getElementById("expPerso").style.display = valeur == "Perso" ? 'block' : 'none'
-            
+
             let f = ["Java", "Git", "Tous"]
             document.getElementById('ProjetReprise').style.display = f.includes(valeur) ? 'block' : 'none'
 

@@ -54,12 +54,64 @@ main {
 }
 
 p {
-    max-width: 900px;
+    
+}
+
+#blocProposMoi {
+    max-width: 800px;
+    min-width: 550px;
     margin-bottom: 30px;
 }
 
-#moi {
+#blocProposMoi>div + div{
    font-size: larger; 
+   background-color: #d7ecff;
+   padding: 20px;
+   border-radius: 20px;
+}
+
+#blocProposMoi>div + div li{
+   margin-left: 20px;
+}
+
+ul>ul {
+    margin-left: 30px;
+    font-size: medium;
+}
+
+#softSkills {
+    display: none;
+}
+
+#interet {
+    display: none;
+}
+/* #moi {
+   font-size: larger; 
+   background-color: #d7ecff;
+   padding: 10px;
+   border-radius: 20px;
+} */
+
+#optionMoi {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    /* max-width: 850px; */
+}
+
+#optionMoi>button {
+    font-size: larger;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* padding-right: 10px;
+    padding-left: 10px; */
+    min-width: 150px;
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #d7ecff;
+    border-color: #7a9dff;
 }
 
 /* ---------- SECTION TITLES ---------- */
