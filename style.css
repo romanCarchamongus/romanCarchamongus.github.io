@@ -54,18 +54,28 @@ main {
 }
 
 #optionMoi>button:first-child {
-    background-color: #b5cee3;
+    background-color: #f3f3f3
+}
+#optionMoi>button:hover {
+    transform: scale(1.05);
+    transition: 100ms;
+    border-color: #004aad;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
 }
 
 #blocProposMoi {
     max-width: 1200px;
-    min-width: 550px;
+    /* min-width: 550px; */
     margin-bottom: 30px;
 }
 
 #blocProposMoi>div + div{
    font-size: larger; 
-   background-color: #d7ecff;
+   /* background-color: #d7ecff; */
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   border: solid 1px;
+   border-color: #ddd;
    padding: 20px;
    border-radius: 20px;
 }
@@ -108,8 +118,8 @@ ul>ul {
     width: 250px;
     height: 35px;
     border-radius: 10px;
-    background-color: #d7ecff;
-    border-color: #7a9dff;
+    background-color: #fff;
+    border-color: #eee;
 }
 
 /* ---------- SECTION TITLES ---------- */
@@ -284,10 +294,10 @@ h3 {
         height: 60px;
     }
 
-    .modal {
+    /* .modal {
         min-width: 630px;
         
-    }
+    } */
     .modal h2 {
         text-align: center;
     }
@@ -299,6 +309,9 @@ h3 {
         color: #0066ff;
         top: auto;
     }
+    #modal-div {
+        margin: 0;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -308,8 +321,16 @@ h3 {
 } 
 
 
-@media(max-width:400px){
-    main {
-        min-width: 390px;
-    } 
+@media(max-width:580px){
+    #optionMoi {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #optionMoi>button {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
 }
+
