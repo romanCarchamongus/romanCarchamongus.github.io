@@ -36,9 +36,9 @@
         </a>
         <div id="blocProposMoi">
             <div id="optionMoi">
-                <button name="presentation" onclick="showPresentation()">Présentation</button>
-                <button name="softSkills" onclick="showSkills()">Soft-skills</button>
-                <button name="centreInteret" onclick="showInteret()">Centres d'intérêt</button>
+                <button id="bpres" name="presentation" onclick="showPresentation()">Présentation</button>
+                <button id="bskills" name="softSkills" onclick="showSkills()">Soft-skills</button>
+                <button id="binteret" name="centreInteret" onclick="showInteret()">Centres d'intérêt</button>
             </div>
             <div id="pres">
                 Je suis Roman Roiné, né en 2006 et actuellement étudiant en BUT informatique.
@@ -513,16 +513,27 @@
             document.getElementById("pres").style.display = "block";
             document.getElementById("interet").style.display = "none";
             document.getElementById("softSkills").style.display = "none";
+            selectedButton("bpres");
         }
         function showInteret(){
             document.getElementById("pres").style.display = "none";
             document.getElementById("interet").style.display = "block";
             document.getElementById("softSkills").style.display = "none";
+            selectedButton("binteret");
         }
         function showSkills(){
             document.getElementById("pres").style.display = "none";
             document.getElementById("interet").style.display = "none";
             document.getElementById("softSkills").style.display = "block";
+            selectedButton("bskills");
+        }
+        function selectedButton(id){
+            document.getElementById(id).style.backgroundColor = "#b5cee3"
+            for(const b of document.getElementById("optionMoi").children){
+                if(b.id != id) {
+                    b.style.backgroundColor="#d7ecff";
+                }
+            }
         }
         function filter() {
             const filtre = document.getElementById("filtre");
