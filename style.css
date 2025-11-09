@@ -218,6 +218,7 @@ h3 {
 }
 
 .modal {
+    margin:10px;
     background: white;
     padding: 30px;
     border-radius: 15px;
@@ -361,7 +362,7 @@ h3 {
     .close {
         color: #0066ff;
         top: auto;
-        position: sticky; 
+        /* position: sticky;  */
     }
     /*#modal-div {
         margin: 0;
@@ -370,12 +371,17 @@ h3 {
 
 @media (max-width: 1100px) {
     .modal img {
-        max-width: 400px;
+        max-width: 280px;
     }
 } 
 
 
 @media(max-width:580px){
+    
+    h2 {
+        text-align: center;
+        display: block;
+    }
     #optionMoi {
         display: flex;
         flex-direction: column;
