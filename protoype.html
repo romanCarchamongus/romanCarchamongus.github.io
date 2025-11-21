@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Roiné</title>
+    <link href="ptototypeStyle.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div>
+            <img id="photo" src="imageMoi.jpg" />
+            <h1>Roman Roiné</h1>
+        </div>
+        <div>
+            <a href="mailto:roman.roine2006@gmail.com">
+                <img class="logo" src="gmail-removebg-preview.png">
+            </a>
+            <!--
+            <a href="https://gitlab-ce.iut.u-bordeaux.fr/rroine">
+                <img class="logo" src="gitlab.png">
+            </a>
+            -->
+            <a href="https://www.linkedin.com/in/roman-roiné-247361397">
+                <img class="logo" src="linkedin-removebg-preview.png">
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+        <div id="imgfondNumerique">
+        <h2 id="titreMoi">A propos de moi</h2>
+        <img src="pp.png">
+        <div id="blocProposMoi">
+            <div id="optionMoi">
+                <button id="bpres" name="presentation" onclick="showPresentation()">Présentation</button>
+                <button id="bskills" name="softSkills" onclick="showSkills()">Soft-skills</button>
+                <button id="binteret" name="centreInteret" onclick="showInteret()">Centres d'intérêt</button>
+            </div>
+            <div id="pres">
+                Je suis Roman Roiné, né en 2006 et actuellement étudiant en BUT informatique.
+                L'informatique est un domaine qui m'a intéressé dès lors que j'ai choisi la spécialité
+                NSI (Numérique et Science de l'Informatique) au lycée. J'ai toujours apprécié résoudre
+                des problèmes logiques, par exemple en mathématiques, et été fasciné par les possibilités
+                créatives que permet l'informatique. C'est pour cela que j'apprécie beaucoup réfléchir 
+                à la conception de fonctionnalités ainsi que de leur implémentation.
+                
+            </div>
+            <div id="softSkills">
+                 <ul>
+                    <li> <strong>Patience</strong> : j'arrive à garder mon calme et à m'adapter aux situations</li>
+                    <li><strong>Capacités d'apprentissage</strong> : j'arrive à comprendre rapidement
+                        des notions nouvelles et à décortiquer la logique derrière
+                    </li>
+                    <li><strong>Capacités de résolution</strong> : j'ai une certaine aisance en 
+                        résolution de problèmes et en logique en général
+                    </li>
+                    <li><strong>Travail en équipe</strong> : je prends souvent le role de leadeur
+                        lors des projets, j'ai un bon relationnel et je m'assure 
+                        que personne n'est mis à l'écart
+                    </li>
+                </ul> 
+            </div>
+            <div id="interet">
+                <ul>
+                    <li>Jeux impliquant de la stratégie, échecs en particulier</li>
+                    <ul>
+                        <li>Ancien joueur du club Echequier Tressois</li>
+                        <li>+1200 elo en rapid chess.com</li>
+                    </ul>
+                    <li>Lecture de roman policier ou de light novel</li>
+                    <li>Jeux vidéo</li>
+                    <ul>
+                        <li>Jeux de plateforme : Geometry Dash, Celeste</li>
+                        <li>Jeux nintendo : Mario Kart, Splatoon, Pokemon</li>
+                    </ul>
+                </ul>
+            </div>
+            
+        </div>
+        </div>
+            <h2 id="proj">Mes projets universitaires</h2>
+        <br>
+        <label for="filtre">Filtre</label>
+        <select id="filtre" onchange="filter()">
+            <option value="Tous">Tous</option>
+            <option id="perso" value="Perso">Sélection personnelle</option>
+            <option value="Java">Java</option>
+            <option value="Csharp">C#</option>
+            <option value="BasNiveau">Système</option>
+            <option value="Gestion">Gestion de projet</option>
+            <option value="Git">Git</option>
+            <option value="DB">Base de données</option>
+            <option value="HP">Hors programmation</option>
+
+        </select>
+        <br>
+        <p id="expPerso">
+            Cette sélection regroupe les projets qui, à mes yeux, sont les plus intéressants.
+        </p>
+        <!-- SEMESTRE 3 -->
+        <h3>Semestre 3 : 09/2025 - Aujourd'hui</h3>
+        <section id="s3" class="sem">
+            <div class="sae" id="ProjetReprise">
+                <h4>Projet de reprise - Labyrinthe</h4>
+                <div>
+                    <img src="labyrintheProjReprise.png" class="small">
+                    <p>Implémentation d'entités et d'un personnage déplaçable en Java</p>
+                    <div class="exp">
+                        Ce projet a permis de se remettre dans le rythme et de resolliciter toutes
+                        nos connaissances en programmation orientée objet et sur l'API Java.<br>
+                        En partant de l'interface déjà prête et de quelques éléments de code, nous
+                        devions afficher un labyrinthe enregistré sous forme de fichier texte,
+                        coder un personnage déplaçable par les touches du clavier ainsi que de faire
+                        apparaître des entités se déplaçant automatiquement et aléatoirement.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>langage : Java</li>
+                            <li>IDE : netBeans</li>
+                            <li>Git : Gitlab</li>
+                        </ul>
+                        <h5>Compétences sollicités ou acquises</h5>
+                        <ul>
+                            <li>Lire des fichiers en Java</li>
+                            <li>Créer des exceptions personnalisées en Java</li>
+                            <li>Respecter les normes de la programmation orientée objet</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sae" id="xxxlogistique">
+                <h4>XXX Logistique - Gestion d'un projet</h4>
+                <div>
+                    <img src="extraitProto.png" class="small">
+                    <p>Créer un projet en pratiquant le design thinking</p>
+                    <div class="exp">
+                        Une entreprise nommée XXX Logistique nous a confié la mission de
+                        réaliser un logiciel permettant à un entrepôt
+                        d'organiser correctement les mouvements des colis et de les stocker dans une base de
+                        données.<br>
+                        Le but de ce projet, par équipe de 5, est de nous faire appliquer le design thinking ainsi que
+                        les étapes importantes de la réalisation d'un projet avant le codage. Ce projet
+                        s'arrête à la partie analyse, nous n'avons pas codé le logiciel.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>Norme BPMN</li>
+                            <li>Design thinking</li>
+                            <li>Diagrammes (classe, contexte statique, cas d'utilisation...)</li>
+                        </ul>
+                        <h5>Compétences sollicités ou acquises</h5>
+                        <ul>
+                            <li>Appliquer le design thinking</li>
+                            <li>Modéliser un projet sous forme de diagrammes</li>
+                            <li>Gérer une équipe afin d'optimiser la réalisation des tâches</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- SEMESTRE 2 -->
+        <h3>Semestre 2 : 01/2025 - 06/2025</h3>
+        <section id="s2" class="sem">
+            <div class="sae" id="jpo">
+                <h4>Atelier JPO 2025</h4>
+                <div>
+                    <img src="LabyJPO.png" class="small">
+                    <p>Inventer et réaliser un atelier pour la journée portes ouvertes 2025</p>
+                    <div class="exp">
+                        Lors des journées portes ouvertes, il y a plusieurs ateliers à
+                        disposition des lycéens afin d'apprendre les premières bases d'un langage.
+                        Mon équipe, composée de 4 personnes, avait pour mission de produire un atelier
+                        sur le langage Java<br>
+                        A partir d'une interface graphique fournie, nous devions produire un jeu
+                        éducatif ainsi qu'un livret guidant le joueur afin d'enseigner
+                        les bases de Java et de la programmation en général.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>langage : Java</li>
+                            <li>IDE : netBeans</li>
+                            <li>Git : Gitlab</li>
+                            <li>Mattermost</li>
+                        </ul>
+                        <h5>Compétences sollicités ou acquises</h5>
+                        <ul>
+                            <li>Empathie face à des débutants</li>
+                            <li>Travailler en équipe</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sae" id="EvoGrapher">
+                <h4>EvoGrapher - Création de graphiques</h4>
+                <div>
+                    <img src="evoGrapher.png" class="small">
+                    <p>Réaliser une application complète permettant de créer et d'afficher des graphiques</p>
+                    <div class="exp">
+                        Ce projet était le dernier projet de notre première année et avait pour but de rassembler
+                        un grand nombre d'enseignements en une seule mission. <br>
+                        A partir d'un cahier des charges et par équipe de 5, nous devions fournir
+                        une application fonctionnelle permettant la création de divers graphiques tel
+                        que des histogrammes, des régressions linéaires... Ces graphiques devaient permettre
+                        de visualiser des données de plusieurs pays préalablement stockés dans une base de
+                        données. Nous devions également rendre un dossier de conception, un dossier de spécification
+                        et présenter un pitch en anglais ainsi qu'une démo.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>langages : Python, C#</li>
+                            <li>IDE : Visual Studio, Visual Studio Code</li>
+                            <li>SGBD : mySQL</li>
+                            <li>Git : Gitlab</li>
+                            <li>Diagramme de Gantt</li>
+                        </ul>
+                        <h5>Compétences sollicités ou acquises</h5>
+                        <ul>
+                            <li>Relier une IHM à une base de données</li>
+                            <li>Utiliser plusieurs langages de programmation pour un seul projet</li>
+                            <li>Gérer une équipe afin d'optimiser la réalisation des tâches</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sae" id="Botlings">
+                <h4>Botlings - développement d'une IHM</h4>
+                <div>
+                    <img src="botLingIMG.png" class="small">
+                    <p>Perfectionner un jeu en utilisant un Windows Form sous Visual Studio</p>
+                    <div class="exp">
+                        Nous avons été fourni d'un jeu incomplet dont il a fallu créer plusieurs
+                        fonctionnalités supplémentaires. Ce jeu est une variante d'un tower defense,
+                        un jeu où il faut éliminer des ennemis arrivant à la chaîne.<br>
+                        Par équipe de 3, nous avons dû nous organiser afin d'implémenter le plus
+                        de fonctionnalités possibles parmi une liste donnée. Parmi cette liste,
+                        la plus difficile que j'ai eu à m'occuper était une implémentation d'un
+                        algorithme de Dijkstra.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>langage : C#</li>
+                            <li>IDE : Visual Studio</li>
+                            <li>Windows Form</li>
+                        </ul>
+                        <h5>Compétences sollicités ou acquises</h5>
+                        <ul>
+                            <li>Créer une IHM en C#</li>
+                            <li>Implémenter un algorithme de Dijkstra</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sae" id="Reseau">
+                <h4>Configuration d'un réseau</h4>
+                <div>
+                    <img src="configRouteur.png" class="small">
+                    <p>Configurer des machines virtuelles pour communiquer en réseau</p>
+                    <div class="exp">
+                        Lors de ce projet par équipe de 2 nous avons dû réaliser plusieurs
+                        liaisons entre des machines virtuelles afin de les faire communiquer en réseau.<br>
+                        L'objectif final était de fournir un tutoriel sur toutes les étapes nécessaires
+                        afin de brancher les machines en réseau afin qu'elles puissent communiquer et
+                        de s'en servir comme environnement de travail.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>Machines virtuelles</li>
+                            <li>shell : bash</li>
+                        </ul>
+                        <h5>Compétences sollicités ou acquises</h5>
+                        <ul>
+                            <li>Configurer des machines en réseau</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sae" id="graphes">
+                <h4>Implémentation d'algorithme sur des graphes</h4>
+                <div>
+                    <img src="saegraph.png" class="small">
+                    <p>Implémenter des algorithmes de Force Directed et d'Autosizing sur plusieurs types de graphes</p>
+                    <div class="exp">
+                        L'objectif de ce projet était d'appliquer différents algorithmes sur des graphes,
+                        en particulier les algorithmes de Force Directed et d'Autosizing, et ceci par
+                        équipe de deux.<br>
+                        Pour cela nous avions d'abord dû créer deux classes de graphes différentes, l'une
+                        étant basée sur les matrices d'adjacences, et l'autre sur les listes d'adjacences.
+                        Pour chacune des classes, nous devions implémenter les deux algorithmes ainsi
+                        qu'observer le résultat sur une interface donnée.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>langage : Java</li>
+                            <li>IDE : netBeans</li>
+                            <li>Git : Gitlab</li>
+                        </ul>
+                        <h5>Compétences sollicités ou acquises</h5>
+                        <ul>
+                            <li>Implémenter des graphes</li>
+                            <li>Appliquer des algorithmes sur des graphes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- SEMESTRE 1 -->
+        <h3>Semestre 1 : 09/2024 - 01/2025</h3>
+        <section id="s1" class="sem">
+            <div class="sae" id="installation">
+                <h4>Installation d'une machine virtuelle</h4>
+                <div>
+                    <img src="SAEsystemS1.png" class="small">
+                    <p>Installer et configurer une machine virtuelle permettant d'écrire des programmes en langage forth
+                    </p>
+                    <div class="exp">
+                        Lors de ce projet, nous devions trouver une distribution linux légère afin de
+                        l'installer sur une machine virtuelle sous VMware. Nous étions par équipe de deux
+                        et après l'installation de linux mint, la distribution que nous avions choisi, , il a fallu
+                        installer vscode, créer
+                        les utilisateurs et être capable d'exécuter un programme simple en forth<br>
+                        L'objectif était ensuite de présenter le bon fonctionnement de notre installation
+                        lors d'une soutenance, ainsi que de présenter un petit rapport sur les raisons de notre
+                        choix et les différentes étapes réalisées.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>distribution Linux Mint</li>
+                            <li>shell : bash</li>
+                            <li>logiciel VMware</li>
+                        </ul>
+                        <h5>Compétences sollicités ou acquises</h5>
+                        <ul>
+                            <li>Installer et configurer une distribution linux</li>
+                            <li>Installer des logiciels depuis le terminal linux</li>
+                            <li>Personnaliser un prompt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sae" id="Lowatem">
+                <h4>Lowatem - Jeu de stratégie</h4>
+                <div>
+                    <img src="plateauLowatem.png" class="small">
+                    <p>Gérer les actions du joueur et implémenter une IA qui choisit la meilleure action</p>
+                    <div class="exp">
+                        Ce projet était séparé en deux parties :<br>
+                        La première partie était en travail individuel, le code d'un jeu original nommé "Lowatem"
+                        était fourni avec une interface graphique. Les consignes étaient réparties en 14 niveaux
+                        de difficulté, chaque niveau décrivant des règles d'actions possibles. Notre objectif
+                        était d'être en mesure de renvoyer l'ensemble des actions possibles sur un plateau
+                        donné. J'ai personnellement atteint le niveau 11, me plaçant dans les 15% de ma promotion
+                        ayant validé ce niveau ou plus haut. <br>
+                        La deuxième partie était par équipe de deux. Il fallait concevoir deux IA qui joueraient
+                        au jeu avec comme objectif d'être la plus performante possible. Les IA de toutes les
+                        équipes s'affrontaient chaque jour et étaient classés selon leur nombre de victoire.
+                        Nos IA se basaient sur un algorithme MinMax et étaient généralement situés dans les hauteurs
+                        du classement.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>langage : Java</li>
+                            <li>IDE : netBeans</li>
+                            <li>git : Gitlab</li>
+                        </ul>
+                        <h5>Compétences sollicités ou acquises</h5>
+                        <ul>
+                            <li>Renforcer mon aisance en Java</li>
+                            <li>Implémenter un algorithme MinMax</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sae" id="Odomo">
+                <h4>Odomo - Station météorologique</h4>
+                <div>
+                    <img src="odomo.png" class="small">
+                    <p>Implémenter les actions d'une station météorologique miniature</p>
+                    <div class="exp">
+                        Odomo est notre premier projet en Java. Le code d'une petite station météorologique
+                        nous était fourni incomplet et il a fallu ajouter les fonctionnalités manquantes.
+                        La console faisait office d'interface graphique, la station en question n'était qu'une
+                        interface visuelle et non une vraie station météorologique. <br>
+                        Ce projet nous a permis de nous exercer sur les tableaux, et d'appliquer les
+                        compétences de base de la programmation en Java.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>langage : Java</li>
+                            <li>IDE : netBeans</li>
+                        </ul>
+                        <h5>Compétences sollicités ou acquises</h5>
+                        <ul>
+                            <li>Coder un projet en Java</li>
+                            <li>Appliquer des algorithmes sur des tableaux</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sae" id="DB">
+                <h4>Création et remplissage d'une base de données</h4>
+                <div>
+                    <img src="mcdSaeDB.png" class="small">
+                    <p>Générer une base de données depuis un cahier des charges avec un MCD</p>
+                    <div class="exp">
+                        Notre objectif était, depuis un document qui décrivait l'ensemble
+                        des attentes d'un client, de créer un Modèle Conceptuel des Données (MCD)
+                        sur le logiciel winDesign afin de pouvoir ensuite générer le script de
+                        création de base.<br>
+                        Nous étions par équipe de deux, et après avoir exécuté le script de création
+                        ainsi qu'avoir ajouté plusieurs contraintes d'intégrité, nous avions dû remplir
+                        la base manuellement afin de vérifier son bon fonctionnement.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>langage : SQL</li>
+                            <li>logiciel MCD : winDesign</li>
+                            <li>logiciel BD : SQL Management Studio 19</li>
+                        </ul>
+                        <h5>Compétences sollicités ou acquises</h5>
+                        <ul>
+                            <li>Créer une base de données depuis un MCD</li>
+                            <li>Renforcer mon aisance en SQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sae" id="Web">
+                <h4>Etu-santé - Site web sur la santé étudiante</h4>
+                <div>
+                    <img src="Web.png" class="small">
+                    <p>Créer un site Web en HTML/CSS sur le thème de la santé</p>
+                    <div class="exp">
+                        L'objectif de ce projet était la création d'un site web sur le thème de la santé
+                        afin de rassembler toutes les connaissances qui nous avaient été enseignées en cours.
+                        Nous avions beaucoup de liberté sur le contenu, j'ai ainsi choisi de faire
+                        un site sur le thème de la santé en tant qu'étudiant.<br>
+                        Il s'agissait d'un travail individuel où seul l'HTML et le CSS étaient autorisés.
+                        Notre site devait tout de même être responsive afin de pouvoir s'adapter sur un écran
+                        de smartphone ou un écran d'ordinateur.
+                        Voici le résultat : <a href="SAE/html/Accueil_Etu-Santé.html">Etu-santé</a>
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>langage : HTML, CSS</li>
+                            <li>IDE : vscode</li>
+                        </ul>
+                        <h5>Compétences sollicités ou acquises</h5>
+                        <ul>
+                            <li>Utiliser le display flex en CSS</li>
+                            <li>Créer un site responsive</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sae" id="Caudalie">
+                <h4>Economie/Gestion - Analyse d'une entreprise</h4>
+                <div>
+                    <img src="caudalie.png" class="small">
+                    <p>Réaliser le diagnostic de l'entreprise Caudalie</p>
+                    <div class="exp">
+                        Ce projet s'éloigne de la programmation. En effet, par équipe de 5,
+                        notre objectif était de faire des recherches auprès d'une entreprise afin
+                        d'y faire une analyse micro et macro environnementale. Pour cela nous avons
+                        utilisé le modèle PESTEL ainsi que le modèle de la concurrence élargie de Porter<br>
+                        Notre équipe a choisi l'entreprise Caudalie parmi la liste proposée. Nous devions
+                        d'abord effectuer une présentation orale sur le fonctionnement interne de l'entreprise
+                        puis écrire un rapport d'une dizaine de pages sur celle-ci, avec son fonctionnement ainsi
+                        que son diagnostic.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>base de données Diane</li>
+                            <li>archives europresse</li>
+                        </ul>
+                        <h5>Compétences sollicités ou acquises</h5>
+                        <ul>
+                            <li>Effectuer des recherches approfondies</li>
+                            <li>Effectuer le diagnostic d'une entreprise</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="overlay" class="overlay">
+        <div class="modal">
+            <span class="close">&times;</span>
+            <div>
+                <h2 id="modal-title">Titre du projet</h2>
+                <div>
+                    <img id="modal-img" src="" alt="">
+                    <div id="modal-div"></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!--<h2 id="competences">Mes compétences</h2>
+    <div>
+
+    </div>
+    <br>-->
+    <script>
+        function showPresentation(){
+            document.getElementById("pres").style.display = "block";
+            document.getElementById("interet").style.display = "none";
+            document.getElementById("softSkills").style.display = "none";
+            selectedButton("bpres");
+        }
+        function showInteret(){
+            document.getElementById("pres").style.display = "none";
+            document.getElementById("interet").style.display = "block";
+            document.getElementById("softSkills").style.display = "none";
+            selectedButton("binteret");
+        }
+        function showSkills(){
+            document.getElementById("pres").style.display = "none";
+            document.getElementById("interet").style.display = "none";
+            document.getElementById("softSkills").style.display = "block";
+            selectedButton("bskills");
+        }
+        function selectedButton(id){
+            document.getElementById(id).style.backgroundColor = "#f0f0ff";
+            for(const b of document.getElementById("optionMoi").children){
+                if(b.id != id) {
+                    b.style.backgroundColor="#f3f3f3";
+                    b.style.transform="scale(1.0)";
+                }
+                else{
+                    b.style.transform="scale(1.07)";
+                }
+            }
+        }
+        function filter() {
+            const filtre = document.getElementById("filtre");
+            const valeur = filtre.value; // récupère la valeur choisie
+
+            document.getElementById("expPerso").style.display = valeur == "Perso" ? 'block' : 'none'
+
+            let f = ["Java", "Git", "Tous"]
+            document.getElementById('ProjetReprise').style.display = f.includes(valeur) ? 'block' : 'none'
+
+            f = ["Gestion", "HP", "Perso", "Tous"]
+            document.getElementById('xxxlogistique').style.display = f.includes(valeur) ? 'block' : 'none'
+
+            f = ["Java", "Gestion", "Git", "Tous"]
+            document.getElementById('jpo').style.display = f.includes(valeur) ? 'block' : 'none'
+
+            f = ["Gestion", "Git", "Perso", "Csharp", "DB", "Tous"]
+            document.getElementById('EvoGrapher').style.display = f.includes(valeur) ? 'block' : 'none'
+
+            f = ["Csharp", "Perso", "Tous"]
+            document.getElementById('Botlings').style.display = f.includes(valeur) ? 'block' : 'none'
+
+            f = ["BasNiveau", "Tous"]
+            document.getElementById('Reseau').style.display = f.includes(valeur) ? 'block' : 'none'
+
+            f = ["Java", "Git", "Tous"]
+            document.getElementById('graphes').style.display = f.includes(valeur) ? 'block' : 'none'
+
+            f = ["BasNiveau", "Perso", "HP", "Tous"]
+            document.getElementById('installation').style.display = f.includes(valeur) ? 'block' : 'none'
+
+            f = ["Java", "Git", "Perso", "Tous"]
+            document.getElementById('Lowatem').style.display = f.includes(valeur) ? 'block' : 'none'
+
+            f = ["Java", "Tous"]
+            document.getElementById('Odomo').style.display = f.includes(valeur) ? 'block' : 'none'
+
+            f = ["DB", "Tous"]
+            document.getElementById('DB').style.display = f.includes(valeur) ? 'block' : 'none'
+
+            f = ["Git", "Tous"]
+            document.getElementById('Web').style.display = f.includes(valeur) ? 'block' : 'none'
+
+            f = ["HP", "Tous"]
+            document.getElementById('Caudalie').style.display = f.includes(valeur) ? 'block' : 'none'
+        }
+        document.querySelectorAll('.sae').forEach(sae => {
+            sae.addEventListener('click', () => {
+                const title = sae.querySelector('h4').innerText;
+                const imgSrc = sae.querySelector('img').src;
+                const text = sae.querySelector('p').innerText;
+                const exp = sae.querySelector('.exp');
+
+                // Remplit la modale
+                document.getElementById('modal-title').innerText = title;
+                document.getElementById('modal-img').src = imgSrc;
+                document.getElementById('modal-div').innerHTML = exp ? exp.innerHTML : "";
+                // Affiche la modale
+                document.getElementById('overlay').style.display = 'flex';
+            });
+        });
+
+        // Fermer la modale
+        document.querySelector('.close').addEventListener('click', () => {
+            document.getElementById('overlay').style.display = 'none';
+        });
+
+        // Fermer en cliquant à l’extérieur de la modale
+        document.getElementById('overlay').addEventListener('click', (e) => {
+            if (e.target.id === 'overlay') {
+                document.getElementById('overlay').style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
