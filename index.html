@@ -87,11 +87,13 @@
             <option id="perso" value="Perso">Sélection personnelle</option>
             <option value="Java">Java</option>
             <option value="Csharp">C#</option>
+            <option value="Web">Web</option>
             <option value="BasNiveau">Système</option>
             <option value="Gestion">Gestion de projet</option>
             <option value="Git">Git</option>
             <option value="DB">Base de données</option>
             <option value="HP">Hors programmation</option>
+            
 
         </select>
         <br>
@@ -99,8 +101,65 @@
             Cette sélection regroupe les projets qui, à mes yeux, sont les plus intéressants.
         </p>
         <!-- SEMESTRE 3 -->
-        <h3>Semestre 3 : 09/2025 - Aujourd'hui</h3>
+        <h3>Semestre 3 : 09/2025 - 01/2026 </h3>
         <section id="s3" class="sem">
+            <div class="sae" id="ABRAVL">
+                <h4>Développement efficace - ABR et AVL</h4>
+                <div>
+                    <img src="AVLFig5.png" class="small">
+                    <p> Concevoir des Arbres Binaires de Recherches et des AVL afin de comparer leurs
+                        performances.
+                    </p>
+                    <div class="exp">
+                        Nous étions par équipe de 2 et, en utilisant le langage Java et nos
+                        connaissances en POO et en Arbre Binaire de Recherche (ABR), nous devions
+                        fournir une implémentation pour des ABR et AVL qui soit optimisée 
+                        afin de comparer le temps d'exécution d'une insertion et d'une recherche dans un arbre.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>Langage Java</li>
+                            <li>IDE : NetBeans</li>
+                        </ul>
+                        <h5>Compétences sollicités ou acquises</h5>
+                        <ul>
+                            <li>Implémenter des concepts mathématiques</li>
+                            <li>Resolliciter nos connaissances de POO</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sae" id="RobotFootLeague">
+                <h4>Projet de fin de semestre - création d'un site web</h4>
+                <div>
+                    <img src="robotFootLeague.png" class="small">
+                    <p> Réaliser un site web par équipe en utilisant la méthode agile
+                        et le framework Symfony
+                    </p>
+                    <div class="exp">
+                        Par équipe de 6, nous devions réaliser un site web permettant d'organiser des 
+                        compétitions de foot de robot. Il s'agissait de la première fois que nous travaillons
+                        en connexion avec une base de données, et que nous mettions en place une méthodologie scrum.
+                        <br>
+                        Pendant le projet, j'ai pris le role de scrum master et j'ai aidé mon équipe sur différents
+                        aspects du projet. J'ai eu un rôle majeur en ce qui concerne la conception et la rédaction
+                        de procédures et de triggers dans la base.
+
+                        <h5> Outils utilisés</h5>
+                        <ul>
+                            <li>Symfony</li>
+                            <li>PhpMyAdmin / MySQL</li>
+                            <li>Méthodologie Scrum</li>
+                        </ul>
+                        <h5>Compétences sollicités ou acquises</h5>
+                        <ul>
+                            <li>Appliquer la méthode agile en projet</li>
+                            <li>Travailler sur une base de donnée, au delà de la conception </li>
+                            <li>Gagner en aisance sur Symfony</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="sae" id="ProjetReprise">
                 <h4>Projet de reprise - Labyrinthe</h4>
                 <div>
@@ -265,15 +324,20 @@
                         L'objectif final était de fournir un tutoriel sur toutes les étapes nécessaires
                         afin de brancher les machines en réseau afin qu'elles puissent communiquer et
                         de s'en servir comme environnement de travail.
+                        <br>
+                        Nous avons également pu étudier quelques types d'attaques basiques, comme le
+                        "Man in the Middle" ou le DOS ainsi que comment s'en protéger.
 
                         <h5> Outils utilisés</h5>
                         <ul>
-                            <li>Machines virtuelles</li>
+                            <li>Machines virtuelles : Qemu, Debian</li>
                             <li>shell : bash</li>
                         </ul>
                         <h5>Compétences sollicités ou acquises</h5>
                         <ul>
                             <li>Configurer des machines en réseau</li>
+                            <li>Accéder à un site web hébergé localement </li>
+                            <li>Bases de cybersécurité</li>
                         </ul>
                     </div>
                 </div>
@@ -541,9 +605,15 @@
             const valeur = filtre.value; // récupère la valeur choisie
 
             document.getElementById("expPerso").style.display = valeur == "Perso" ? 'block' : 'none'
-
+            
             let f = ["Java", "Git", "Tous"]
             document.getElementById('ProjetReprise').style.display = f.includes(valeur) ? 'block' : 'none'
+
+            f = ["Tous", "Java", "Git"]
+            document.getElementById('ABRAVL').style.display = f.includes(valeur) ? 'block' : 'none'
+
+            f = ["Tous", "Perso", "Git", "Gestion", "Web"]
+            document.getElementById('RobotFootLeague').style.display = f.includes(valeur) ? 'block' : 'none'
 
             f = ["Gestion", "HP", "Perso", "Tous"]
             document.getElementById('xxxlogistique').style.display = f.includes(valeur) ? 'block' : 'none'
@@ -575,11 +645,13 @@
             f = ["DB", "Tous"]
             document.getElementById('DB').style.display = f.includes(valeur) ? 'block' : 'none'
 
-            f = ["Git", "Tous"]
+            f = ["Git", "Tous", "Web"]
             document.getElementById('Web').style.display = f.includes(valeur) ? 'block' : 'none'
 
             f = ["HP", "Tous"]
             document.getElementById('Caudalie').style.display = f.includes(valeur) ? 'block' : 'none'
+
+            
         }
         document.querySelectorAll('.sae').forEach(sae => {
             sae.addEventListener('click', () => {
